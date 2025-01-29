@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba Ontbijt - Bestel hier je ontbijt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8e8d0;
+            color: #5a3e2b;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #d9a066;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .category {
+            margin-top: 20px;
+        }
+        .product {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            background-color: #d97950;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b25e3c;
+        }
+        #cart {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .back-button {
+            background-color: #d97950;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #b25e3c;
+        }
+    </style>
+</head>
+<body>
+    <header>Boba Ontbijt - Start je dag goed!</header>
+    <div class="container">
+        <h2>Bestel hier je ontbijt</h2>
+        
+        <div class="category">
+            <h3>Nederlandse ontbijtgerechten</h3>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Broodje" alt="Broodje hagelslag">
+                <span>Broodje hagelslag - €3,50</span>
+                <button onclick="addToCart('Broodje hagelslag', 3.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Beschuit" alt="Beschuit met muisjes">
+                <span>Beschuit met muisjes (2 stuks) - €2,50</span>
+                <button onclick="addToCart('Beschuit met muisjes (2 stuks)', 2.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Krentenbol" alt="Krentenbol met kaas">
+                <span>Krentenbol met kaas - €4,00</span>
+                <button onclick="addToCart('Krentenbol met kaas', 4.00)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Yoghurt" alt="Yoghurt met cruesli">
+                <span>Yoghurt met cruesli - €5,50</span>
+                <button onclick="addToCart('Yoghurt met cruesli', 5.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Bruin+brood" alt="Bruin brood met kaas en jam">
+                <span>Bruin brood met kaas en jam - €4,50</span>
+                <button onclick="addToCart('Bruin brood met kaas en jam', 4.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Wentelteefjes" alt="Wentelteefjes">
+                <span>Wentelteefjes (2 stuks) - €6,00</span>
+                <button onclick="addToCart('Wentelteefjes (2 stuks)', 6.00)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Pap" alt="Pap">
+                <span>Pap (havermout, griesmeel, brinta) - €5,00</span>
+                <button onclick="addToCart('Pap (havermout, griesmeel, brinta)', 5.00)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Eierkoek" alt="Eierkoek met boter">
+                <span>Eierkoek met boter - €3,00</span>
+                <button onclick="addToCart('Eierkoek met boter', 3.00)">Toevoegen</button>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h3>Engelse ontbijtgerechten</h3>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=English+Breakfast" alt="Full English Breakfast">
+                <span>Full English Breakfast - €12,50</span>
+                <button onclick="addToCart('Full English Breakfast', 12.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Scrambled+eggs" alt="Scrambled eggs met toast">
+                <span>Scrambled eggs met toast - €7,50</span>
+                <button onclick="addToCart('Scrambled eggs met toast', 7.50)">Toevoegen</button>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Franse ontbijtgerechten</h3>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Croissant" alt="Croissant met jam of kaas">
+                <span>Croissant met jam of kaas - €3,50</span>
+                <button onclick="addToCart('Croissant met jam of kaas', 3.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Pain+au+chocolat" alt="Pain au chocolat">
+                <span>Pain au chocolat - €3,75</span>
+                <button onclick="addToCart('Pain au chocolat', 3.75)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Baguette" alt="Baguette met boter en confiture">
+                <span>Baguette met boter en confiture - €5,00</span>
+                <button onclick="addToCart('Baguette met boter en confiture', 5.00)">Toevoegen</button>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Amerikaanse ontbijtgerechten</h3>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Bagel" alt="Bagel met roomkaas en zalm">
+                <span>Bagel met roomkaas en zalm - €7,50</span>
+                <button onclick="addToCart('Bagel met roomkaas en zalm', 7.50)">Toevoegen</button>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Dranken</h3>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Koffie" alt="Koffie">
+                <span>Koffie (zwart, cappuccino, latte) - €3,00 - €4,50</span>
+                <button onclick="addToCart('Koffie', 4.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Thee" alt="Thee">
+                <span>Thee (diverse smaken) - €3,00</span>
+                <button onclick="addToCart('Thee', 3.00)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Melk" alt="Melk">
+                <span>Melk (glas, warm of koud) - €2,50</span>
+                <button onclick="addToCart('Melk', 2.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Sinaasappelsap" alt="Sinaasappelsap">
+                <span>Sinaasappelsap (vers geperst) - €4,50</span>
+                <button onclick="addToCart('Sinaasappelsap', 4.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Chocolademelk" alt="Chocolademelk">
+                <span>Chocolademelk - €3,50</span>
+                <button onclick="addToCart('Chocolademelk', 3.50)">Toevoegen</button>
+            </div>
+            <div class="product">
+                <img class="image" src="https://via.placeholder.com/50?text=Slagroom" alt="Slagroom">
+                <span>Slagroom (optioneel) - €0,50</span>
+                <button onclick="addToCart('Slagroom', 0.50)">Toevoegen</button>
+            </div>
+        </div>
+        
+        <div id="cart">
+            <h3>Jouw bestelling</h3>
+            <ul id="cart-list"></ul>
+            <p><strong>Totaal: €<span id="total">0.00</span></strong></p>
+            <button onclick="checkout()">Afrekenen</button>
+        </div>
+        
+        <button class="back-button" onclick="window.history.back()">Terug</button>
+    </div>
+    
+    <script>
+        let cart = [];
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            updateCart();
+        }
+        function updateCart() {
+            let cartList = document.getElementById('cart-list');
+            let totalElement = document.getElementById('total');
+            cartList.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                let li = document.createElement('li');
+                li.textContent = `${item.product} - €${item.price.toFixed(2)}`;
+                cartList.appendChild(li);
+                total += item.price;
+            });
+            totalElement.textContent = total.toFixed(2);
+        }
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Je winkelwagen is leeg!');
+                return;
+            }
+            let totalPrice = document.getElementById('total').textContent;
+            // Gebruiker wordt doorgestuurd naar de betaalpagina
+            window.location.href = 'https://www.ontbijtjeafrekenen.nl/bedankt?amount=' + totalPrice;
+        }
+    </script>
+</body>
+</html>
+
